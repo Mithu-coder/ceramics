@@ -1,0 +1,53 @@
+<!-- templates/partials/footer.html -->
+
+<footer class="bg-dark text-white p-4 mt-5">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase">ShopMate</h5>
+          <p>Your one-stop shop for everything you love. Quality products, fast shipping, and unbeatable prices.</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="" class="text-white text-decoration-none">Shop</a></li>
+            <li><a href="" class="text-white text-decoration-none">Cart</a></li>
+            <li><a href="" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- My Account -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase">My Account</h5>
+          <ul class="list-unstyled">
+            {% if user.is_authenticated %}
+              <li><a href="" class="text-white text-decoration-none">Profile</a></li>
+              <li><a href="" class="text-white text-decoration-none">My Orders</a></li>
+              <li><a href="" class="text-white text-decoration-none">Logout</a></li>
+            {% else %}
+              <li><a href="" class="text-white text-decoration-none">Login</a></li>
+              <li><a href="" class="text-white text-decoration-none">Register</a></li>
+            {% endif %}
+          </ul>
+        </div>
+  
+        <!-- Contact & Social -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase">Contact Us</h5>
+          <p>Email: support@shopmate.com<br>Phone: +880 1234 567890</p>
+          <div>
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center py-3 border-top border-secondary mt-3">
+        &copy; {{ current_year }} ShopMate. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
